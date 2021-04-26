@@ -1,5 +1,10 @@
 package com.vti.mock.repository;
 
-public interface IAdminRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+
+import com.vti.mock.entity.Admin;
+
+public interface IAdminRepository extends JpaRepository<Admin, Integer>, JpaSpecificationExecutor<Admin>{
 
 }

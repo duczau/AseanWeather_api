@@ -17,7 +17,7 @@ import javax.persistence.Table;
  * map class voi table trong database
  */
 @Entity
-@Table(name = "User", catalog = "WeatherApi")
+@Table(name = "User", catalog = "WeatherDatabase")
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;

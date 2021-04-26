@@ -13,7 +13,7 @@ import javax.persistence.Table;
  * map class voi table trong database
  */
 @Entity
-@Table(name = "Admin", catalog = "WeatherApi")
+@Table(name = "Admin", catalog = "WeatherDatabase")
 public class Admin implements Serializable {
 
 	private static final long serialVersionUID = 1L;
