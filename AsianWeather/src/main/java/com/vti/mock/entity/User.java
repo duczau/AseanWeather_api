@@ -43,7 +43,7 @@ public class User implements Serializable {
 	 * join with city table -> Favourite city
 	 */
 	@ManyToMany
-	@JoinTable(name = "FavouriteCountry", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "CityID"))
+	@JoinTable(name = "FavoriteCity", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "CityID"))
 	List<City> favoriteCities;
 
 	/**
