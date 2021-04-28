@@ -40,7 +40,7 @@ public class Country implements Serializable{
 	/**
 	 * join City class
 	 */
-	@OneToMany(mappedBy = "countryID")
+	@OneToMany(mappedBy = "country")
 	private List<City> cities;
 	
 	public Country() {
