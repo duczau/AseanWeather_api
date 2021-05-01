@@ -3,8 +3,10 @@ package com.vti.mock.entity;
 import java.io.Serializable;
 import java.util.List;
 
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -17,7 +19,7 @@ import javax.persistence.Table;
  * map class voi table trong database
  */
 @Entity
-@Table(name = "User", catalog = "WeatherApi")
+@Table(name = "User", catalog = "WeatherDatabase")
 public class User implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -42,8 +44,8 @@ public class User implements Serializable {
 	/**
 	 * join with city table -> Favourite city
 	 */
-	@ManyToMany
-	@JoinTable(name = "FavouriteCountry", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "CityID"))
+	@ManyToMany(fetch = FetchType.LAZY, cascade = {CascadeType.ALL})
+	@JoinTable(name = "FavoriteCity", joinColumns = @JoinColumn(name = "UserID"), inverseJoinColumns = @JoinColumn(name = "CityID"))
 	List<City> favoriteCities;
 
 	/**

@@ -17,7 +17,7 @@ import javax.persistence.Table;
  * map class voi table trong database
  */
 @Entity
-@Table(name = "City", catalog = "WeatherApi")
+@Table(name = "City", catalog = "WeatherDatabase")
 public class City implements Serializable {
 
 	private static final long serialVersionUID = 1L;
@@ -41,7 +41,7 @@ public class City implements Serializable {
 	 */
 	@ManyToOne
 	@JoinColumn(name = "CountryID")
-	private Country countryID;
+	private Country country;
 
 	@Column(name = "Image", length = 50, nullable = false, unique = true)
 	private String image;
@@ -86,8 +86,12 @@ public class City implements Serializable {
 		this.description = description;
 	}
 
-	public Country getCountryID() {
-		return countryID;
+	public Country getCountry() {
+		return country;
+	}
+	
+	public void setCountry(Country country) {
+		this.country = country;
 	}
 	
 	public List<User> getListUser() {
