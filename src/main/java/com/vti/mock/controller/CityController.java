@@ -15,9 +15,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.vti.mock.dto.search.CityDTOFormUpdate;
 import com.vti.mock.dto.search.CityDTOSearch;
 import com.vti.mock.dto.search.UserDTOSearch;
+import com.vti.mock.dto.update.CityDTOFormUpdate;
 import com.vti.mock.entity.City;
 import com.vti.mock.entity.Country;
 import com.vti.mock.entity.User;
