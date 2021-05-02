@@ -1,4 +1,4 @@
-package com.vti.mock.dto.search;
+package com.vti.mock.dto.update;
 
 public class CityDTOFormUpdate {
 

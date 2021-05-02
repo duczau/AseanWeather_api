@@ -17,7 +17,7 @@ CREATE TABLE `Admin`(
 -- CREATE TABLE: User
 CREATE TABLE `User`(
 	UserID			INT UNSIGNED NOT NULL  PRIMARY KEY AUTO_INCREMENT,
-    FacebookID		VARCHAR(250) NOT NULL,
+    FacebookID		VARCHAR(250) NOT NULL UNIQUE,
 	`Name`			NVARCHAR(250) NOT NULL,
     Email 			VARCHAR(50) NOT NULL UNIQUE KEY ,
     Address			NVARCHAR(250) NOT NULL
@@ -64,9 +64,9 @@ VALUES 					(	"ngthanhtien@gmail.com"		,	"admin123"		),
                         (	"hatienhiepn@gmail.com"		,	"admin123"		);
 
 -- INSERT DATABASE TO TABLE User
-INSERT INTO `User`		(	`Name`						, 	Email					,	Address		)
-VALUES					(	"Nguyễn Thanh Tiến"			,	"ngthanhtien@gmail.com"	,	"Trung thôn, Đông Hội, Đông Anh, Hà Nội"),
-						(	"Nguyễn Hoàng Giang"		,	"nghoanggiang@gmail.com",	"Trung thôn, Đông Hội, Đông Anh, Hà Nội");
+INSERT INTO `User`		(		FacebookID				,	`Name`						, 	Email					,	Address		)
+VALUES					(		"2000000000000000"		,	"Nguyễn Thanh Tiến"			,	"ngthanhtien@gmail.com"	,	"Trung thôn, Đông Hội, Đông Anh, Hà Nội"),
+						(		"1000000000000000"		,	"Nguyễn Hoàng Giang"		,	"nghoanggiang@gmail.com",	"Trung thôn, Đông Hội, Đông Anh, Hà Nội");
 -- INSERT DATABASE TO TABLE COUNTRY
 INSERT INTO Country		(	CountryName					, 	`Description` 			, 	Image		) 
 VALUES 					(	"Brunei"					,		"abc"				,	"abc"		),

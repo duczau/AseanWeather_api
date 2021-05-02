@@ -31,6 +31,9 @@ public class User implements Serializable {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int id;
+	
+	@Column(name = "FacebookID", length = 256, nullable = false, unique = true)
+	private String facebookId;
 
 	@Column(name = "Name", length = 256, nullable = false)
 	private String name;
@@ -64,6 +67,14 @@ public class User implements Serializable {
 
 	public void setId(int id) {
 		this.id = id;
+	}
+	
+	public String getFacebookId() {
+		return facebookId;
+	}
+	
+	public void setFacebookId(String facebookId) {
+		this.facebookId = facebookId;
 	}
 
 	public String getName() {
